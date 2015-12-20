@@ -1,0 +1,13 @@
+---
+layout: layout
+---
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <article class="post mdl-color--white mdl-shadow--4dp mdl-cell mdl-cell--8-col" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+    <p class="post-meta mdl-typography--text-right mdl-color-text--grey-500"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time></p>
+  </article>
+</div>

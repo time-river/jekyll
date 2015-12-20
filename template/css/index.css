@@ -1,0 +1,45 @@
+/* ---- reset ---- */
+body {
+margin: 0;
+font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+display: block;
+vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #7BCFA6;
+background-image: url("");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+}
+/* ---- panel ---- */
+.panel{
+  font-family: 'Source Sans Pro';
+  font-size:1.3em;
+  position: absolute;
+  z-index:10;
+  width:200px;
+  height:220px;
+  background:#fff;
+  top:50%;
+  left:50%;
+  margin:-110px 0 0 -100px;
+  padding:20px;
+  border-radius: 2em;
+  text-align: center;
+  opacity: 0.75;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+#timeline{
+  text-decoration-line: none;
+  font-size: 25px;
+  color: 4B5CC4;
+}

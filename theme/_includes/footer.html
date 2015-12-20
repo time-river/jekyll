@@ -1,0 +1,18 @@
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer--left-section">
+    <ul class="mdl-mini-footer--link-list">
+      {% if site.owner.email %}
+      <li class="material-icons"><a href="mailto:{{ site.owner.email }}">email</a></li>
+      {% endif %}
+      {% if site.owner.github_username %}
+      <li class="github-icon">{% include icon-github.html username=site.owner.github_username %}</li>
+      {% endif %}
+  </div>
+  <div class="mdl-mini-footer--right-section">
+    <ul class="mdl-mini-footer--link-list">
+      <li><b>River</b>&#160;design</li>
+      <li>&#169;&#160;<span id="year"></span></li>
+      <li>Powered&#160;by&#160;<a href="http://jekyllrb.com/">Jekyll</a></li>
+    </ul>
+  </div>
+</footer>

@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall mdl-layout__header--transparent menu-show">
+    <div class="mdl-layout__drawer-button navigation-color">
+      <i class="material-icons">menu</i>
+    </div>
+    {% if page.id %}
+    <div class="mdl-layout__header-row">
+      <span class="mdl-color-text--cyan-200 mdl-layout-title">{{ site.title }}</span>
+      <div class="mdl-layout-spacer"></div>
+      <button id="menu" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect navigation-color">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" id="menu-list" for="menu">
+      </ul>
+    </div>
+    {% endif %}
+  </header>
+  {% include drawer.html %}
+  <main class="mdl-layout__content">
+    {{ content }}
+    {% include footer.html %}
+  </main>
+</div>
+<script src="//cdn.bootcss.com/material-design-lite/1.0.6/material.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.0.0/highlight.min.js"></script>
+<script>
+function addElementLi(ul, value) {
+  var li = document.createElement("li");
+  var a  = document.createElement("a");
+  li.setAttribute("class", "mdl-menu__item");
+  a.setAttribute("class", "menu__link");
+  a.setAttribute("class", "menu__link-a")
+  a.setAttribute("href", '#'+value);
+  a.innerHTML = value;
+  li.appendChild(a);
+  ul.appendChild(li);
+}
+function menu(){
+  var ul = document.getElementById("menu-list");
+  var tags = document.getElementsByTagName("h2");
+  if (ul == null || tags == null){
+    return;
+  }
+  for (var i=0; i < tags.length; i++) {
+    addElementLi(ul, tags[i].innerHTML)
+  }
+}
+function time() {
+  var today=new Date();
+  var year=today.getFullYear();
+  var CopYear = document.getElementById("year");
+  CopYear.innerHTML = year;
+}
+function run() {
+  time();
+  menu();
+}
+window.onload = run;
+hljs.initHighlightingOnLoad();
+</script>

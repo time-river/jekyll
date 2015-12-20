@@ -1,0 +1,119 @@
+body {
+ // font-family: "Microsoft Jhenghei","Microsoft YaHei","微软雅黑","Droid Serif","Georgia","serif";
+  background: url("../images/background.png") repeat;
+}
+/*adjust footer*/
+.grid{
+  min-height: 74vh;
+}
+.navigation-color i {
+  color: #505050;
+}
+/*show menu list*/
+.menu-show {
+  overflow: visible !important;
+}
+.drawer-header {
+  padding: 1.5rem;
+  background: url("../images/psb.jpg") no-repeat;
+  background-size: 100%;
+  background-color: lightblue;
+}
+.mdl-layout__drawer {
+  background: url("../images/nav.jpg") repeat;
+}
+
+.mdl-layout__tab,
+.mdl-navigation__link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+}
+#avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0px auto 10px;
+  border-radius: 43px;
+  border: 3px solid #fff;
+}
+#avatar-talk {
+  text-align: right;
+}
+.drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
+.post-content h1 {
+  font-size: 1.5em;
+  background-color: #f7f7f7;
+  color: #33363b;
+  font-weight: normal;
+  margin: 0px;
+  padding: 5px 0 5px 0.5em;
+  border-left: 10px solid #7fc042;
+}
+.post-content article h4, .style h4 {
+  font-size: 18px;
+  background-color: #f7f7f7;
+  color: #33363b;
+  font-weight: normal;
+  margin: 5px 0;
+  padding: 5px 0 5px 15px;
+  border-left: 3px solid #449fe6;
+}
+.post-content article p {
+  padding: 5px 18px;
+  margin: 0 0 9px 0;
+}
+.post-content article blockquote {
+  margin: 15px 0;
+  padding: 0 14px;
+  font-size: 16px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+/*delete quotation marks*/
+blockquote::before, blockquote::after {
+  content: close-quote;
+}
+#highlight{
+  margin: 0;
+  padding: 0;
+}
+#post-time {
+  padding: 8px 18px 0 18px;;
+  margin: 0 0 15px 0;
+}
+pre {
+  padding: 0px;
+  margin: 0px;
+}
+pre code{
+  border-width: 0 0 0 5px;
+  border-style: solid;
+  border-color: rgba(102, 128, 153, 0.075) rgba(102, 128, 153, 0.075) rgba(102, 128, 153, 0.075) rgba(102, 128, 153, 0.75);
+  margin: 0;
+  line-height: 18px;
+}
+code {
+  background: #eee;
+  color: #c7254e;
+  border: 1px solid #ccc;
+  border-radius: .25em;
+  padding: 4px 5px;
+  line-height: 14px;
+  word-wrap: break-word;
+}
+.github-icon {
+  height: 36px;
+  width: 24px;
+}
+.style {
+  margin-bottom: 15px;
+}
+
+.footer-adjust{
+  min-height: 74vh;
+}

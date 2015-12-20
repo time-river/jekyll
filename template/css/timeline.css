@@ -1,0 +1,48 @@
+body {
+  font-family: "Microsoft Jhenghei","Microsoft YaHei","微软雅黑","Droid Serif","Georgia","serif";
+  background: url("../images/background.png") repeat;
+}
+.footer-adjust{
+  min-height: 74vh;
+}
+.navigation-color i {
+  color: #505050;
+}
+/*show menu list*/
+.menu-show {
+  overflow: visible !important;
+}
+.drawer-header {
+  padding: 1.5rem;
+  background: url("../images/psb.jpg") no-repeat;
+  background-size: 100%;
+  background-color: lightblue;
+}
+.mdl-layout__drawer {
+  background: url("../images/nav.jpg") repeat;
+}
+.mdl-navigation__link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+}
+#avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0px auto 10px;
+  border-radius: 43px;
+  border: 3px solid #fff;
+}
+#avatar-talk {
+  text-align: right;
+}
+.drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
+.github-icon {
+  height: 36px;
+  width: 24px;
+}
