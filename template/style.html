@@ -7,13 +7,15 @@
   <meta name="description" content="Conten of blog">
   <title>Page</title>
   <!--mdl-->
-  <link rel="stylesheet" href="mdl/material.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="mdl/material.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://vvl.me/assets/css/accordion.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/material-design-lite/1.0.6/material.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://vvl.me/assets/css/main.css">
+  <script src="https://cdn.bootcss.com/material-design-lite/1.0.6/material.min.js"></script>
   <!--highlight-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/8.9.1/styles/default.min.css">
-  <script src="https://cdn.jsdelivr.net/highlight.js/8.9.1/highlight.min.js"></script>
+  <link href="https://cdn.bootcss.com/highlight.js/9.0.0/styles/default.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/highlight.js/9.0.0/styles/mono-blue.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/highlight.js/9.0.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
@@ -69,15 +71,33 @@
     <main class="mdl-layout__content">
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-        <div class="mdl-color--white mdl-shadow--4dp mdl-cell mdl-cell--8-col footer-adjust">
-          <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-            <div class="page-content">1<!-- Your content goes here --></div>
+        <div class="mdl-cell mdl-cell--8-col">
+          <section id="section1" class="accordion">
+            <h3><a href="#section1">links1</a></h3>
+            <div class="accordion-links">
+              <ul>
+                <li><i class="accordion-link-i">2015-12-31</i><a href="#">target11111111111111111111111</a></li>
+                <li><a href="#">target2</a></li>
+                <li><a href="#">target3</a></li>
+              </li>
+            </div>
           </section>
-          <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-            <div class="page-content">2<!-- Your content goes here --></div>
+          <section id="section2" class="accordion">
+            <h3><a href="#section2">links2</a></h3>
+            <div class="accordion-links">
+              <a href="#">target4</a>
+              <a href="#">target5</a>
+              <a href="#">target6</a>
+            </div>
           </section>
-          <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-            <div class="page-content">3<!-- Your content goes here --></div>
+          <section id="section3" class="accordion">
+            <h3><a href="#section3">links3</a></h3>
+            <div class="accordion-links">
+              <ul>
+              <li><a href="#">target7</a></li>
+              <li><a href="#">target8</a></li>
+              <a href="#">target9</a>
+            </div>
           </section>
         </div>
       </div>

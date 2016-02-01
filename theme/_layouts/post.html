@@ -9,5 +9,25 @@ layout: layout
       {{ content }}
     </div>
     <p class="post-meta mdl-typography--text-right mdl-color-text--grey-500"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time></p>
+  <div class="page-down">
+    {% if page.previous != nil %}
+    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="{{ page.previous.url }}">&#60;&#60;上一篇</a>
+    {% else %}
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">tag_faces</i></button>
+    {% endif %}
+    {% if page.next != nil %}
+    <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-right button-right" href="{{ page.next.url }}">下一篇&#62;&#62;</a>
+    {% else %}
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--icon button-right"><i class="material-icons">send</i></button>
+    {% endif %}
+  </div>
   </article>
 </div>
+{% if site.commit.bool == true %}
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+  {% include disqus.html %}
+  </div>
+</div>
+{% endif %}

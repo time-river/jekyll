@@ -11,18 +11,18 @@ title: timeline
       {% capture prev_year %}{{ post.next.date | date: "%Y"}}{% endcapture %}
       {% if forloop.first %}
       <div class="grain-set">
-        <h2 class="grain-set-year">{{ this_year }}</h2>
+        <h1 class="grain-set-year">{{ this_year }}</h1>
       </div>
       {% else %}
       {% if this_year != prev_year %}
       <div class="grain-set">
-        <h1 class="grain-set-year">{{ this_year }}</h2>
+        <h1 class="grain-set-year">{{ this_year }}</h1>
       </div>
       {% endif %}
       {% endif %}
       <section class="grain">
         <header class="info-header">
-          <h2 class="info-title"><a class="info-title-link" href="{{ post.url }}">{{ post.title }}</a></h1>
+          <h3 class="info-title"><a class="info-title-link" href="{{ post.url }}">{{ post.title }}</a></h3>
           <time class="info-time">{{ post.date | date: "%m-%d" }}</time>
         </header>
       </section>

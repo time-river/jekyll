@@ -40,6 +40,9 @@ body {
   background-color: #dcdcdc;
   margin: 8px 0;
 }
+.menu-list a {
+  font-weight: 500;
+}
 /* -- show menu list -- */
 .menu-show {
   overflow: visible !important;
@@ -49,11 +52,8 @@ blockquote::before, blockquote::after {
   content: close-quote;
 }
 /* -- adjust footer -- */
-.mdl-grid{
+.grid-adjust {
   min-height: 80vh;
-}
-.menu__link-a {
-  text-decoration: none;
 }
 /* -- article -- */
 .post-title {
@@ -74,7 +74,7 @@ blockquote::before, blockquote::after {
   border-left: 3px solid #449fe6;
 }
 .post-content p{
-  text-indent: 2em;
+  /*text-indent: 2em;*/
   line-height: 1.5em;
   margin: 0;
 }
@@ -110,6 +110,13 @@ pre code{
   padding: 8px 18px 0 18px;;
   margin: 0 0 15px 0;
 }
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.button-right {
+  float: right;
+}
 @media (min-width: 768px){
   .post-title {
     padding: 15px 0.5em;
@@ -117,21 +124,40 @@ pre code{
   }
   .post-content h2 {
     line-height: 40px;
+    margin: 20px 0 15px 0;
   }
   .post-content p {
     padding: 2px 18px;
   }
+  ul,
+  ol {
+    padding: 2px 18px 2px 38px;
+  }
+  .accordion-link-i {
+    margin-right: 8px;
+  }
 }
 @media (max-width: 767px){
+  .mdl-layout-title {
+    font-size: 14px;
+  }
   .post-title{
     padding: 10px 0.5em;
     font-size: 1.5em;
   }
   .post-content h2 {
     line-height: 35px;
+    margin: 15px 0 10px 0;
   }
   .post-content p{
     padding: 2px 10px;
+  }
+  ul,
+  ol {
+    padding: 2px 10px 2px 28px;
+  }
+  .accordion-link-i {
+    display: block;
   }
 }
 .github-icon {
@@ -231,7 +257,7 @@ pre code{
   color: #555;
   font-size: 12px;
   left: 15px;
-  line-height: 20.4ox;
+  line-height: 20.4px;
   position: absolute;
   top: 1px;
 }
@@ -245,4 +271,109 @@ pre code{
   height: 100%;
   background: #f555 none repeat scroll 0% 0%;
   z-index: -1;
+}
+/* accordion */
+.accordion {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 16px 8px;
+  background: #fff;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: all .5s ease;
+}
+.accordion h3 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 28px;
+}
+.accordion div {
+  color: #999;
+}
+.accordion h3 a {
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+}
+.accordion h3 a:hover {
+  font-weight: bold;
+}
+.accordion h3 + div {
+  height: 0;
+  overflow: hidden;
+  transition: height .5s ease;
+  -webkit-transition: height .5s ease;
+}
+.accordion:target h3 + div {
+  height: 100px;
+  overflow: auto;
+}
+.accordion:target h3 {
+  padding-bottom: 0;
+}
+.accordion:hover {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.accordion:target a {
+  font-weight: bold;
+}
+.accordion-links li a{
+  word-wrap: break-word;
+  text-decoration: none;
+}
+.accordion-links ul {
+  margin: 0;
+}
+/* mdl-card */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+.mdl-card__title { 
+  height: 176px;  
+}
+.post-button { 
+  position: absolute; 
+  right: 15px; 
+  bottom: 25px; 
+}
+.card-highlight {
+  position: relative;
+  margin: 10px;
+}
+.card-highlight .mdl-card__supporting-text { 
+  margin: 40px; 
+  -webkit-box-flex: 1; 
+  -webkit-flex-grow: 1; 
+  -ms-flex-positive: 1; 
+  flex-grow: 1; 
+  padding: 0; 
+  color: inherit; 
+  width: calc(100% - 80px); 
+}
+.card-highlight .mdl-card__actions { 
+  border-top: 1px solid rgba(0, 0, 0, 0.12); 
+  margin: 0; padding: 4px 40px; 
+  color: inherit; 
+}
+.card-highlight header { 
+  display: -webkit-box; 
+  display: -webkit-flex; 
+  display: -ms-flexbox; 
+  display: flex; 
+  -webkit-box-align: center; 
+  -webkit-align-items: center; 
+  -ms-flex-align: center; 
+  align-items: center; 
+  -webkit-box-pack: center; 
+  -webkit-justify-content: center; 
+  -ms-flex-pack: center; 
+  justify-content: center; 
+  min-height: 200px;
+}
+.section-highlight button { 
+  position: absolute; 
+  z-index: 99; 
+  top: 8px; 
+  right: 8px; 
 }
