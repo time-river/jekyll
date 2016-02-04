@@ -1,0 +1,36 @@
+<script src="//cdn.bootcss.com/material-design-lite/1.1.0/material.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js"></script>
+<script>
+function addElementLi(ul, tag) {
+  var a  = document.createElement("a");
+  a.setAttribute("class", "mdl-menu__item");
+  a.setAttribute("href", '#'+tag.id);
+  a.innerHTML = tag.innerHTML;
+  ul.appendChild(a);
+}
+function menu(){
+  var ul = document.getElementById("menu-list");
+  var tags = document.getElementsByTagName("h2");
+  if (tags.length == 0){
+    ul.remove(self);
+    var button = document.getElementById("menu");
+    button.remove(self);
+    return;
+  }
+  for (var i=0; i < tags.length; i++) {
+    addElementLi(ul, tags[i])
+  }
+}
+function time() {
+  var today=new Date();
+  var year=today.getFullYear();
+  var CopYear = document.getElementById("year");
+  CopYear.innerHTML = year;
+}
+function run() {
+  time();
+  menu();
+}
+window.onload = run;
+hljs.initHighlightingOnLoad();
+</script>

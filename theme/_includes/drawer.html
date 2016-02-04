@@ -1,11 +1,11 @@
-<div class="mdl-layout__drawer">
-  <header class="drawer-header">
-    <a href="#">
+<div class="mdl-layout__drawer" style="background: url('{{ site.navigation.background_image }}') repeat;">
+  <header class="drawer-header" style="padding: 1.5rem; background: url('{{ site.navigation.header_image }}') no-repeat; background-size: 100%; background-color: lightblue;">
+    <a href="/about/avatar.html">
       <img src="{{ site.owner.avatar }}" id="avatar">
     </a>
     {{% if site.owner.talk %}}
     <p id="avatar-talk" class="mdl-shadow--8dp mdl-color-text--grey-50">
-    {{ site.owner.talk | newline_to_br }}
+    {{ site.owner.talk }}
     </p>
     {{% endif %}}
   </header>
@@ -15,6 +15,6 @@
     <a class="mdl-navigation__link mdl-color-text--grey-900" href="/local_movies.html"><i class="material-icons">local_movies</i>{{ site.navigation.local_movies }}</a>
     <a class="mdl-navigation__link mdl-color-text--grey-900" href="/timeline.html"><i class="material-icons">timeline</i>{{ site.navigation.timeline }}</a>
     <div class="drawer-separator"></div>
-    <a class="mdl-navigation__link mdl-color-text--grey-900" href="#"><i class="material-icons">near_me</i>{{ site.navigation.near_me }}</a>
+    <a class="mdl-navigation__link mdl-color-text--grey-900" href="/about/"><i class="material-icons">near_me</i>{{ site.navigation.near_me }}</a>
   </nav>
 </div>

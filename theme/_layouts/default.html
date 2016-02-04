@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   {% include head.html %}
-  <body>
+  <body{% if page.title %} style="background: url('{{ site.background_image }}') repeat;"{% endif %}>
   {{ content }}
+  {% if site.analytics.bool == true %}
+  {% include google_analytics.html %}
+  {% endif %}
   </body>
 </html>

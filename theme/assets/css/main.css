@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body {
-  font-family: "Noto Sans SC","Microsoft Jhenghei","Microsoft YaHei","微软雅黑", "Helvetica","Arial",sans-serif;
+  font-family: "Noto Sans SC","Microsoft YaHei","微软雅黑", "Helvetica","Arial",sans-serif;
   color: black;
-  background: url("/images/background.png") repeat;
+  background: url("{{ site.background_image }}") repeat;
 }
 /* -- navigation --*/
 .navigation-color i {
@@ -22,12 +22,12 @@ body {
 }
 .drawer-header {
   padding: 1.5rem;
-  background: url("/images/psb.jpg") no-repeat;
+  background: url("{{ site.navigation.header_image }}") no-repeat;
   background-size: 100%;
   background-color: lightblue;
 }
 .mdl-layout__drawer {
-  background: url("/images/nav.jpg") repeat;
+  background: url("{{ site.navigation.background_image }}") repeat;
 }
 .mdl-navigation__link {
   display: flex !important;
@@ -56,6 +56,16 @@ blockquote::before, blockquote::after {
   min-height: 80vh;
 }
 /* -- article -- */
+.entry {
+  padding-left: 15px;
+}
+.entry b{
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  right: 3px;
+  border-radius: 3px 3px;
+}
 .post-title {
   background-color: #f7f7f7;
   color: #33363b;
@@ -199,7 +209,6 @@ img {
   font-size: 30px;
   font-weight: bold;
   line-height: 1;
-  color: #555;
 }
 .grain {
   color: #555;
@@ -212,10 +221,8 @@ img {
 }
 .info-header {
   border-bottom: 1px dashed #ccc;
-  color: #555;
   display: block;
   font-size: 16px;
-  line-height: 27.2px;
   position: relative;
   transition: border 0.2s ease-in-out 0s;
 }
@@ -236,7 +243,6 @@ img {
   transition-property: background;
 }
 .info-title {
-  color: #555;
   font-size: 16px;
   font-weight: 400;
   line-height: 27.2px;
@@ -249,15 +255,12 @@ img {
   color: #666;
   font-size: 16px;
   font-weight: 400;
-  line-height: 27.2px;
   text-decoration: none;
   word-wrap: break-word;
 }
 .info-time {
-  color: #555;
   font-size: 12px;
   left: 15px;
-  line-height: 20.4px;
   position: absolute;
   top: 1px;
 }
