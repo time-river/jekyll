@@ -2,6 +2,8 @@
 ---
 A jekyll theme based in [Google Material Design Lite](http://www.getmdl.io/index.html).
 
+很久之前创作的 Jekyll 主题，已经弃用~
+
 ## Demo
 ---
 ## Getting Started
@@ -28,7 +30,6 @@ image: <address>
 `tags` is not unique in a passage.  
 `image` just exists in a passages which categories is `local_movies`. 
 
-of course, there're other options supported in jekyll, such as 
 ## License
 -------
 Open sourced under the [MIT license](LICENSE).
